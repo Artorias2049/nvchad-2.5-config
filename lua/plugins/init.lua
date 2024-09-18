@@ -98,4 +98,12 @@ return {
             require("configs.mason-dap")
         end,
     },
+
+    {
+        "Exafunction/codeium.vim",
+        event = "BufEnter",
+        config = function()
+            require("configs.codeium").setup()
+        end,
+    },
 }
