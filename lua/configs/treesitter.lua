@@ -1,6 +1,8 @@
 local options = {
     ensure_installed = {
         "python",
+        "c",
+        "cpp",
         "javascript",
         "typescript",
         "bash",
@@ -12,6 +14,7 @@ local options = {
         "vim",
         "vimdoc",
         "yaml",
+        "latex",
     },
 
     highlight = {

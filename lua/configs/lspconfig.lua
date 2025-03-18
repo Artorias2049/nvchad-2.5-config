@@ -8,6 +8,7 @@ local lspconfig = require("lspconfig")
 lspconfig.servers = {
     "lua_ls",
     "pyright",
+    "clangd",
 }
 
 -- list of servers configured with default config.
@@ -34,6 +35,16 @@ lspconfig.pyright.setup({
             },
         },
     },
+})
+
+lspconfig.clangd.setup({
+    on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+        on_attach(client, bufnr)
+    end,
+    on_init = on_init,
+    capabilities = capabilities,
 })
 
 lspconfig.lua_ls.setup({
