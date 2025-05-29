@@ -39,3 +39,8 @@ luac.out
 *.x86_64
 *.hex
 
+# IDE specific files
+agent-doc-system/
+
+# Mac
+.DS_Store
