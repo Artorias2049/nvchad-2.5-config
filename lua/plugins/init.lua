@@ -106,4 +106,18 @@ return {
             require("configs.codeium").setup()
         end,
     },
+
+    {
+        "nvim-telescope/telescope.nvim",
+        config = function()
+            require("telescope").setup(require("configs.telescope"))
+        end,
+    },
+
+    {
+        "nvim-tree/nvim-tree.lua",
+        config = function()
+            require("nvim-tree").setup(require("configs.nvim-tree"))
+        end,
+    },
 }
